@@ -24,7 +24,7 @@ Or install it yourself:
 require 'bigpanda'
 
 panda = BigPanda::Client.new(access_token: 'YOUR_TOKEN')
- # => #<BigPanda::Client:0x007fec52014d20 @config={"access_token"=>"YOUR_TOKEN", "target_url"=>"https://api.bigpanda.io", "deployment_start_path"=>"/data/events/deployments/start", "deployment_end_path"=>"/data/events/deployments/end", :access_token=>"my-access-token"}>
+ # => #<BigPanda::Client:0x007fb7721641b8 @config={:access_token=>"YOUR_TOKEN", :target_url=>"https://api.bigpanda.io", :deployment_start_path=>"/data/events/deployments/start", :deployment_end_path=>"/data/events/deployments/end"}, @ssl={}>
 
 panda.deployment_start({ hosts: ['prod-1', 'prod-2'], component: 'billing', version: '123' })
  # => {"status"=>"created"}
