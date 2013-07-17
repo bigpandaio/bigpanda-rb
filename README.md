@@ -21,16 +21,17 @@ Or install it yourself:
 ### Simple Usage:
 
 ```ruby
-require 'big_panda'
+require 'bigpanda'
 
 panda = BigPanda::Client.new(access_token: 'YOUR_TOKEN')
  # => #<BigPanda::Client:0x007fec52014d20 @config={"access_token"=>"YOUR_TOKEN", "target_url"=>"https://api.bigpanda.io", "deployment_start_path"=>"/data/events/deployments/start", "deployment_end_path"=>"/data/events/deployments/end", :access_token=>"my-access-token"}>
 
 panda.deployment_start({ hosts: ['prod-1', 'prod-2'], component: 'billing', version: '123' })
-# => {"status"=>"created"}
+ # => {"status"=>"created"}
 
-panda.finish_deployment({ hosts: ['prod-1', 'prod-2'], component: 'billing', version: '123' })
-# => {"status"=>"created"}
+panda.deployment_end({ hosts: ['prod-1', 'prod-2'], component: 'billing', version: '123' })
+ # => {"status"=>"created"}
+
 ```
 
 ### SSL Options
