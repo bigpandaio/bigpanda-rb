@@ -6,7 +6,7 @@ A Ruby client and integrations for the BigPanda API
 
 Add this line to your application's Gemfile:
 
-    gem 'bigpanda-rb'
+    gem 'bigpanda'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself:
 
-    $ gem install bigpanda-rb
+    $ gem install bigpanda
 
 ## Usage
 
