@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.authors     = ["BigPanda"]
   s.email       = 'support@bigpanda.io'
   s.files       = ["lib/bigpanda.rb", "lib/bigpanda/capistrano.rb", "lib/bigpanda/bp-api.rb"]
-  s.homepage    = 'https://github.com/bigpandaio/integrations/bigpanda-rb'
+  s.homepage    = 'https://github.com/bigpandaio/bigpanda-rb'
 
   s.add_runtime_dependency 'json'
 end
