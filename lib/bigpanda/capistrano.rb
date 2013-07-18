@@ -69,7 +69,7 @@ Capistrano::Configuration.instance(:must_exist).load do |config|
 
 
   def create_bigpanda_client
-    BigPanda::Client.new(:access_token => fetch(:bigpanda_access_token, ''))
+    BigPanda::Client.new(:access_token => fetch(:bigpanda_access_token, nil))
   end
 
 
