@@ -1,6 +1,6 @@
 # BigPanda
 
-A Ruby client and integrations for the BigPanda API
+A Ruby client (and additional integrations) for BigPanda's API
 
 ## Installation
 
@@ -16,9 +16,7 @@ Or install it yourself:
 
     $ gem install bigpanda
 
-## Usage
-
-### Simple Usage:
+## Example
 
 ```ruby
 require 'bigpanda'

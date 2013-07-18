@@ -2,7 +2,7 @@ Gem::Specification.new do |s|
   s.name        = 'bigpanda'
   s.version     = '0.1.0'
   s.date        = '2013-07-17'
-  s.summary     = "Ruby client and integrations for the BigPanda API"
+  s.summary     = "A Ruby client (and additional integrations) for BigPanda's API"
   s.description = s.summary
   s.authors     = ["BigPanda"]
   s.email       = 'support@bigpanda.io'
