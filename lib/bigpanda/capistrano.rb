@@ -39,7 +39,7 @@ Capistrano::Configuration.instance(:must_exist).load do |config|
                             :version => "#{fetch(:branch, '')} #{release_name}",
                             :hosts => find_servers_for_task(current_task),
                             :env => rails_env,
-                            :owner => fetch(:bp_owner, nil),
+                            :owner => fetch(:bigpanda_owner, nil),
                             :properties => properties
                             })
   rescue Exception => e
