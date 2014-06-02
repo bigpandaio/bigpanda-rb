@@ -96,6 +96,11 @@ module BigPanda
         if options.has_key?(:hosts)
           options[:hosts] = options[:hosts].kind_of?(Array) ? options[:hosts] : [options[:hosts]]
         end
+
+        unless options.has_key?(:source_system)
+          options[:source_system] = "ruby"
+        end
+
       end
 
       # Read configuration from the default list of configuration files and the received file.
