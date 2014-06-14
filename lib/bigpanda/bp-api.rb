@@ -4,7 +4,7 @@ require 'net/https'
 
 module BigPanda
 
-  VERSION               = '0.1.0'
+  VERSION               = '0.1.2'
 
   DEFAULT_CONFIG_FILES  = [ "/etc/bigpanda.yaml", "/etc/bigpanda.yml" ]
   DEFAULT_CONFIGURATION = { # overridable via the configuration file
