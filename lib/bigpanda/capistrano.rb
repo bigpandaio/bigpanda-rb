@@ -30,7 +30,7 @@ Capistrano::Configuration.instance(:must_exist).load do |config|
   # Map capistrano execution variables to BigPanda Fields for deployment start
   #
   # == Parameters:
-  #  optional Hash which can contain all propriatery fields
+  #  optional Hash which can contain all proprietary fields
   #
   def send_deployment_start(properties = {})
     panda = create_bigpanda_client
@@ -40,7 +40,8 @@ Capistrano::Configuration.instance(:must_exist).load do |config|
                             :hosts => find_servers_for_task(current_task),
                             :env => rails_env,
                             :owner => fetch(:bigpanda_owner, nil),
-                            :properties => properties
+                            :properties => properties,
+                            :source_system: "capistrano"
                             })
   rescue Exception => e
     logger.important "err :: while sending BigPanda start, Skipping to next command. #{e.message}"
@@ -49,7 +50,7 @@ Capistrano::Configuration.instance(:must_exist).load do |config|
   # Map capistrano execution variables to BigPanda Fields for deployment end
   #
   # == Parameters:
-  #  optional Hash which can contain all propriatery fields
+  #  optional Hash which can contain all proprietary fields
   #
   def send_deployment_end(status, properties = {})
     panda = create_bigpanda_client
@@ -69,7 +70,7 @@ Capistrano::Configuration.instance(:must_exist).load do |config|
 
 
   def create_bigpanda_client
-    BigPanda::Client.new(:access_token => fetch(:bigpanda_access_token, nil))
+    BigPanda::Client.new(:access_token => fetch(:bigpanda_access_token, nil), :target_url => fetch(:bigpanda_target_url, "https://api.bigpanda.io"))
   end
 
 
