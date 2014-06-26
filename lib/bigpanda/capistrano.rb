@@ -41,7 +41,7 @@ Capistrano::Configuration.instance(:must_exist).load do |config|
                             :env => rails_env,
                             :owner => fetch(:bigpanda_owner, nil),
                             :properties => properties,
-                            :source_system: "capistrano"
+                            :source_system => "capistrano"
                             })
   rescue Exception => e
     logger.important "err :: while sending BigPanda start, Skipping to next command. #{e.message}"
